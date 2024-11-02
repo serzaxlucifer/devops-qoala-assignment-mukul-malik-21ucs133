@@ -5,16 +5,13 @@ import netifaces as ni
 
 app = Flask(__name__)
 
-def get_mac_address():
-    # Function to get the MAC address of the host
-    for iface in ni.interfaces():
-        try:
-            mac = ni.ifaddresses(iface)[ni.AF_LINK][0]['addr']
-            if mac:
-                return mac
-        except KeyError:
-            continue
-    return "N/A"
+def get_mac_address(interface='eth0'):    # Specifically, target eth0 interface.
+    try:
+        mac = ni.ifaddresses(interface)[ni.AF_LINK][0]['addr']
+        return mac
+    except (KeyError, ValueError):
+        return "MAC Address not available"
+
 
 @app.route('/')
 def user_info():
