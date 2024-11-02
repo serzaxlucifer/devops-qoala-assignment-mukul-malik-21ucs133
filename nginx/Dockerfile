@@ -1,5 +1,14 @@
-FROM nginx:latests
-COPY nginix.conf /etc/nginx/nginx.conf
-COPY ./html /usr/share/nginx/htmll
-EXPOSE "eighty"
-CMD ["nginx", "-g", "daemon of;"]
+FROM nginx:latest
+# Changed latests to latest (syntax fixing)
+
+COPY nginx.conf /etc/nginx/nginx.conf
+# Typo nginix to nginx
+
+COPY ./html /usr/share/nginx/html
+#Typo html fixed.
+
+EXPOSE 80
+# Transformed to integral value
+
+CMD ["nginx", "-g", "daemon off;"]
+#of; fixed to off;!

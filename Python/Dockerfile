@@ -1,11 +1,16 @@
 FROM python:3.9
 
-WORKDIR /appp
+WORKDIR /app                         
+# Fixed appp to app.
 
-COPY appy.py /app
+COPY app.py /app				
+# fixed appy to app.
 
-RUN pip install flask netiface
+RUN pip install flask netifaces             
+# Fixed lib name to netifaces.
 
-EXPOSE "eight thousand"
+EXPOSE 8000			
+# Converted to integer
 
-CMD ["pythn", "app.py"]
+CMD ["python", "app.py"]   
+# Fixed typo 'python'
