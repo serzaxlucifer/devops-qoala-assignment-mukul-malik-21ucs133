@@ -16,7 +16,10 @@ While building docker image for the local python app, syntax issues were encount
 Index.HTML file as mentioned in Dockerfile was missing so it was created and syntax issues in both nginx.conf and dockerfile were fixed. This led to successfull build of docker image for the NGINX container.
 
 ### 4. Incorrect MAC Address [Application Bug]
-Once the application was deployed, it showed incorrect MAC Address consisting of all Zeros.
+Once the application was deployed, it showed incorrect MAC Address consisting of all Zeros. This is probably due to network configurations in the container. We typically need to reference the main network interface used by the container. In Docker, this is often eth0 (primary Ethernet network interface) (I'm using Linux here). Supplying interface="eth0" should return us our correct MAC address. Provided in app.py.
+
+**Final Output:**
+![FINAL OUTPUT](https://github.com/serzaxlucifer/devops-qoala-assignment-mukul-malik-21ucs133/blob/main/Screenshots/Screenshot%20from%202024-11-02%2008-30-56.png)
 
 ---
 
