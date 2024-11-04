@@ -1,6 +1,6 @@
 # DevOps Assignment: Debugging and Running a Dockerized Application
 
-Welcome to your DevOps assignment! Your goal is to debug and deploy a Dockerized application. The steps below outline the tasks you’ll complete, including setup, debugging, running, testing, and submitting your work.
+REPORT FILE:     [Report](https://github.com/serzaxlucifer/devops-qoala-assignment-mukul-malik-21ucs133/blob/main/21ucs133_REPORT.md)
 
 ## Assignment Overview
 
